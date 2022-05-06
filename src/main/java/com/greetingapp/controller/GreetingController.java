@@ -14,7 +14,7 @@ public class GreetingController {
     @Autowired
     private GreetingService greetingService;
     /**
-     * @Func :Returning JSON Object
+     * @Func :Returning JSON Object & Ability To Save App In Repository
      * @Param:Adding first name ,last name
      * {
      *     name=suraj in "params"-POSTMAN
@@ -29,6 +29,7 @@ public class GreetingController {
         user.setFirstName(name);
         return greetingService.addGreeting(user);
     }
+
     @GetMapping("/path/{id}")
     public Greeting getElementById(@PathVariable Long id){
         return greetingService.getGreetingById(id);
