@@ -24,4 +24,7 @@ public class Greeting {
         id = 0;
         message = "";
     }
+
+    public void setMessage(String name) {
+    }
 }
